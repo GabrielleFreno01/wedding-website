@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('affiche les noms des mariés sur la page d\'accueil', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const title = screen.getByRole('heading', { level: 1, name: /Gabrielle & Hugo/i });
+  expect(title).toBeInTheDocument();
 });

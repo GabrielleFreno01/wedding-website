@@ -2,6 +2,37 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Déploiement sur Railway
+
+Cette application est un seul process Node (`server/index.js`) qui sert à la fois
+l'API (`/api/*`) et le build React (`/build`). Railway convient bien à ce modèle.
+
+Le fichier `railway.json` définit déjà :
+- **Build** : `npm run build` (génère le dossier `build/`)
+- **Start** : `npm run server` (lance Express, qui sert l'API + le build)
+
+### Checklist avant de déployer
+
+- [ ] **Variables d'environnement** à définir dans l'onglet "Variables" du service Railway
+      (voir `.env.example` pour la liste complète) :
+      - `SPOTIFY_CLIENT_ID`, `SPOTIFY_CLIENT_SECRET`
+      - `ADMIN_PASSWORD`
+      - `SESSION_SECRET` (chaîne aléatoire longue)
+      - `NODE_ENV=production` (active le cookie de session sécurisé)
+      - Ne pas définir `PORT` — Railway le fournit automatiquement.
+- [ ] **Volume persistant** : par défaut, le système de fichiers de Railway est
+      éphémère et est réinitialisé à chaque déploiement. La base de données
+      (`server/data/wedding.db`, qui contient la liste des invités, les RSVP et
+      les suggestions musicales) serait donc effacée à chaque déploiement.
+      Dans l'onglet du service Railway, ajoutez un **Volume** monté sur le
+      chemin `/app/server/data` (adapter si le répertoire de build diffère).
+- [ ] **Domaine** : Railway fournit un sous-domaine `*.up.railway.app` par
+      défaut ; un domaine personnalisé peut être ajouté dans les settings du
+      service si besoin.
+- [ ] Vérifier après le premier déploiement que `/admin` fonctionne (login,
+      ajout d'invités) et que les données survivent à un redéploiement — c'est
+      le signe que le volume est bien monté.
+
 ## Available Scripts
 
 In the project directory, you can run:

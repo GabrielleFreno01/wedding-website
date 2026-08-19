@@ -1,0 +1,49 @@
+.rsvp-form {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.rsvp-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 2px solid var(--color-bg-alt);
+  outline: none;
+  resize: vertical;
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus {
+  border-color: var(--color-accent);
+}
+
+.rsvp-merci {
+  text-align: center;
+}
+
+.rsvp-erreur {
+  margin: 0;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.rsvp-form button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

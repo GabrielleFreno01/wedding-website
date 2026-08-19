@@ -1,0 +1,124 @@
+.programme {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.programme-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.programme-heure {
+  flex-shrink: 0;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  min-width: 76px;
+  text-align: center;
+}
+
+.programme-item h3 {
+  margin: 0 0 4px;
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+}
+
+.programme-item p {
+  margin: 0;
+  color: var(--color-text-light);
+}
+
+.lieu,
+.dresscode {
+  margin-bottom: 32px;
+}
+
+.lieu h2,
+.dresscode h2 {
+  font-family: var(--font-heading);
+  color: var(--color-accent-2);
+  margin-top: 0;
+}
+
+.dresscode-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+
+  &.start{
+    align-items: flex-start;
+  }
+}
+
+.dresscode-item:last-child {
+  margin-bottom: 0;
+}
+
+.dresscode-item p {
+  margin: 0;
+  color: var(--color-text-light);
+}
+
+.dresscode-check {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.dresscode-check svg {
+  width: 16px;
+  height: 16px;
+}
+
+.palette-swatches {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.palette-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--color-white), 0 1px 4px rgba(46, 42, 43, 0.25);
+  cursor: pointer;
+}
+
+.map-wrapper {
+  margin-top: 16px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.map-wrapper iframe {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .programme-item {
+    gap: 14px;
+  }
+
+  .programme-heure {
+    min-width: 64px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .map-wrapper iframe {
+    height: 260px;
+  }
+}
