@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import './Musique.css';
 
 function getVoterId() {
@@ -26,7 +26,7 @@ function Musique() {
 
   const [suggestions, setSuggestions] = useState([]);
 
-  const chargerSuggestions = async () => {
+  const chargerSuggestions = useCallback(async () => {
     try {
       const response = await fetch(`/api/musique?voter=${encodeURIComponent(voterId)}`);
       if (!response.ok) throw new Error('liste indisponible');
@@ -35,7 +35,7 @@ function Musique() {
     } catch {
       // silencieux : la liste est secondaire par rapport au formulaire
     }
-  };
+  }, [voterId]);
 
   const handleVote = async (songId) => {
     setSuggestions((prev) =>
@@ -64,7 +64,7 @@ function Musique() {
 
   useEffect(() => {
     chargerSuggestions();
-  }, []);
+  }, [chargerSuggestions]);
 
   useEffect(() => {
     if (timeoutRef.current) {
