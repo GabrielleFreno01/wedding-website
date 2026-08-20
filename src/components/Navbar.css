@@ -20,6 +20,10 @@
   text-decoration: none;
 }
 
+.navbar-logo-amp {
+  color: var(--color-accent);
+}
+
 .navbar-links {
   display: flex;
   gap: 8px;

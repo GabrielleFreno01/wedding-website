@@ -19,7 +19,7 @@ function Navbar() {
     <header className="navbar">
       <div className="navbar-inner container">
         <NavLink to="/" className="navbar-logo" onClick={() => setOpen(false)}>
-          G&nbsp;&amp;&nbsp;H
+          G&nbsp;<span className="navbar-logo-amp">&amp;</span>&nbsp;H
         </NavLink>
 
         <button

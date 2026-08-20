@@ -38,12 +38,12 @@ const ETAPES = [
     annee: '2025',
     titre: 'Bingo !',
     texte:
-      'Avril : Adoption de Cisco, qui condamne Gabrielle et Hugo à avoir les mains qui sentent les croquettes et à retrouver des sacs à caca dans toutes leurs poches mais qui les comble d\'amour. \nSeptembre : Les fiançailles ! Qui, malgré ce que tout le monde pense, étaient complètement inattendues pour ma part. Seuls, perdus au milieu de la Corse, Gabrielle dit oui 💍 \nNovembre : Gabrielle et Hugo réalise un de leur rêve en achetant un VW California, pour aller n\'importe où, n\'importe quand',
+      'Avril : Adoption de Cisco, qui condamne Gabrielle et Hugo à avoir les mains qui sentent les croquettes et à retrouver des sacs à caca dans toutes leurs poches mais qui les comble d\'amour. \nSeptembre : Les fiançailles ! Qui, malgré ce que tout le monde pense, étaient complètement inattendues pour Gabrielle. Seuls, perdus au milieu de la Corse, Gabrielle a dit oui 💍 \nNovembre : Gabrielle et Hugo réalise un de leur rêve en achetant un VW California, pour aller n\'importe où, n\'importe quand',
   },
   {
     annee: '2027',
     titre: 'Le mariage',
-    texte: 'Le moment tant attendu, après plus de 10 ans, de célébrer leur amour avec vous <3 ',
+    texte: 'Le moment tant attendu, après plus de 10 ans, de célébrer cet amour avec vous <3 ',
   },
 ];
 
